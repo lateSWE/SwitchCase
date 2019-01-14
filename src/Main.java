@@ -110,6 +110,7 @@ public class Main {
                             }
                         }
                     }
+                    choice = 0;
                     break;
 
                 case 2:
@@ -139,6 +140,7 @@ public class Main {
                             num1++;
                         }
                     }
+                    choice = 0;
                     break;
 
                 case 3:
@@ -151,15 +153,12 @@ public class Main {
                             System.out.println("[" + num1 + "]" + " -  " + games[i][0]);
                         }
                     }
+                    choice = 0;
                     break;
 
-                    case 4:
+                case 4:
+                    choice = 0;
                     run = false;
-
-                default:
-                    System.out.println();
-                    System.out.println("Not a valid choice!");
-                    System.out.println();
                     break;
             }
             input.close();
