@@ -75,6 +75,7 @@ public class Main {
             System.out.println("[1]  -  By genre");
             System.out.println("[2]  -  By mode");
             System.out.println("[3]  -  View all");
+            System.out.println("[4]  -  Quit");
 
             Scanner input = new Scanner(System.in);
             int choice = input.nextInt();
@@ -82,6 +83,7 @@ public class Main {
             int num1 = 1;
             switch (choice) {
                 case 1:
+                    System.out.println();
                     System.out.println("What game genre do you want to play?");
                     for (int i = 1; i < genres.length; i++) {
                         if (i < 10) {
@@ -93,6 +95,7 @@ public class Main {
                     }
                     choice = input.nextInt();
 
+                    System.out.println();
                     System.out.println("Here are some games in the genre " + genres[choice] + "!");
                     for (int i = 0; i < games[0].length; i++) {
                         for (int j = 1; j < 4; j++) {
@@ -110,6 +113,7 @@ public class Main {
                     break;
 
                 case 2:
+                    System.out.println();
                     System.out.println("What game mode do you want to play?");
                     for (int i = 0; i < mode.length; i++) {
                         if (i < 10) {
@@ -122,6 +126,7 @@ public class Main {
                     choice = input.nextInt();
                     choice--;
 
+                    System.out.println();
                     System.out.println("Here are some games with " + mode[choice] + " mode(s)!");
                     for (int i = 1; i < games[0].length; i++) {
                         if (games[i][4].equals(mode[choice])) {
@@ -137,6 +142,7 @@ public class Main {
                     break;
 
                 case 3:
+                    System.out.println();
                     for (int i = 0; i < games[0].length; i++) {
                         if (i < 10) {
                             System.out.println("[" + num1 + "]" + "  -  " + games[i][0]);
@@ -147,7 +153,11 @@ public class Main {
                     }
                     break;
 
+                    case 4:
+                    run = false;
+
                 default:
+                    System.out.println();
                     System.out.println("Not a valid choice!");
                     System.out.println();
                     break;
