@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
@@ -71,6 +72,7 @@ public class Main {
         };
         boolean run = true;
         while (run) {
+            System.out.println();
             System.out.println("How do you want to sort the games?");
             System.out.println("[1]  -  By genre");
             System.out.println("[2]  -  By mode");
@@ -129,7 +131,7 @@ public class Main {
 
                     System.out.println();
                     System.out.println("Here are some games with " + mode[choice] + " mode(s)!");
-                    for (int i = 1; i < games[0].length; i++) {
+                    for (int i = 1; i < games[0].length+19; i++) {
                         if (games[i][4].equals(mode[choice])) {
                             if (i < 10) {
                                 System.out.println("[" + num1 + "]" + "  -  " + games[i][0]);
@@ -145,7 +147,7 @@ public class Main {
 
                 case 3:
                     System.out.println();
-                    for (int i = 0; i < games[0].length; i++) {
+                    for (int i = 0; i < games[0].length+19; i++) {
                         if (i < 10) {
                             System.out.println("[" + num1 + "]" + "  -  " + games[i][0]);
                         }
@@ -153,6 +155,7 @@ public class Main {
                             System.out.println("[" + num1 + "]" + " -  " + games[i][0]);
                         }
                     }
+                    num1++;
                     choice = 0;
                     break;
 
@@ -161,7 +164,10 @@ public class Main {
                     run = false;
                     break;
             }
-            input.close();
+            if(!run){
+                System.out.println();
+                System.out.println("Good bye!");
+            }
         }
     }
 }
