@@ -154,8 +154,8 @@ public class Main {
                         if ((i >= 10) && (i < 100)) {
                             System.out.println("[" + num1 + "]" + " -  " + games[i][0]);
                         }
+                        num1++;
                     }
-                    num1++;
                     choice = 0;
                     break;
 
